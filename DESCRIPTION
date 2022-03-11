@@ -1,0 +1,22 @@
+Package: Project1
+Type: Package
+Title: Project1
+Version: 0.1.0
+Authors@R: person("Mark", "Cunningham", email = "markcham@ou.edu", role = c("aut", "cre", "cph"))
+Maintainer: Mark Cunningham <markcham@ou.edu>
+Description: Manipulates ddt.csv
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Depends: R (>= 2.10)
+RoxygenNote: 7.1.2
+Imports:
+    ggplot2,
+    dplyr,
+Suggests:
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+VignetteBuilder: knitr
+URL: https://github.com/markoleptic/Project1
+Config/testthat/edition: 3
