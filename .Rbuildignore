@@ -1,2 +1,6 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
+^LICENSE\.md$
+^LvsWforCCATFISH.CSV
+^LvsWforSMBUFFALO.CSV
+^ddt.csv

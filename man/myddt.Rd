@@ -18,5 +18,6 @@ Returns a plot with length vs weight for species and saves the data frame used i
 A function for Project 1 in MATH 4753
 }
 \examples{
-myddt(df=ddt,SPECIES = "CCATFISH")
+\dontrun{myddt(df=ddt,SPECIES = "CCATFISH")
+}
 }

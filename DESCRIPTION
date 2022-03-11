@@ -4,7 +4,7 @@ Title: Project1
 Version: 0.1.0
 Authors@R: person("Mark", "Cunningham", email = "markcham@ou.edu", role = c("aut", "cre", "cph"))
 Maintainer: Mark Cunningham <markcham@ou.edu>
-Description: Manipulates ddt.csv
+Description: This pakckage manipulates the ddt.csv file using the myddt function.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
