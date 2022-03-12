@@ -1,0 +1,62 @@
+---
+title: "MATH 4753 Project 1"
+author: "Mark Cunningham"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    toc: yes
+    toc_float: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Function Definition
+
+```{r}
+library(Project1)
+library(dplyr)
+library(ggplot2)
+myddt <- function(df, SPECIES){
+  # global variable ignoring
+  RIVER <-  WEIGHT <- LENGTH <- NULL
+  # print list of data frame
+  print(df)
+  # subsetting the dataframe based on species
+  df1 <- df %>% filter(SPECIES == {{SPECIES}})
+  # plotting using ggplot2
+  g <- ggplot(df1, aes_string(x="LENGTH",y="WEIGHT")) + # Note the use of aes_string
+    geom_point(aes_string(color = "RIVER" )) +
+    geom_smooth(formula = y~x +I(x^2), method = "lm") +
+    ggtitle("Mark Cunningham")
+  # print plot
+  print(g)
+  # print subsetted data frame
+  print(df1)
+  # dataframe to csv file after subsetting:
+  write.csv(df1, paste("LvsWfor",SPECIES,".CSV",sep=""))
+  # Table for relative frequency of Rivers:
+  rf_river=with(df,round((table(RIVER)/length(RIVER)),3))
+  rf_river
+}
+```
+## CCATFISH
+
+```{r}
+Project1::myddt(df = ddt, SPECIES  = "CCATFISH") 
+```
+
+## SMBUFFALO
+
+```{r}
+Project1::myddt(df = ddt, SPECIES = "SMBUFFALO")
+```
+
+## Directory check
+
+```{r}
+dir()
+```
+
+
